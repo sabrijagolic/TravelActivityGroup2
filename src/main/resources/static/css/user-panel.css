@@ -1,0 +1,82 @@
+body {
+    font-family: 'Montserrat', sans-serif; padding: 0px;
+    background: url(https://i.imgur.com/Zzf6Lio.jpg);width:100%;height:100vh;
+    background-size: cover;
+}
+
+
+#example{
+
+}
+#tableDiv{
+
+
+    font-family: 'Montserrat', sans-serif;
+    color: aquamarine;
+    font-weight: bold;
+}
+.row, .container{
+
+}
+.container{
+    width: 95% !important;
+
+
+}
+.book{
+    background:aquamarine!important;
+}
+
+
+ .overlay {
+     position: absolute;
+     top: 15%;
+     left: 10px;
+ }
+
+.overlay button {
+    font:600 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #3386c0;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.overlay button:hover {
+    background-color:#4ea0da;
+
+}
+#map { position:absolute; height:100%; bottom:0; width:100%; z-index: 0;}
+.btm{
+    background-color:aquamarine;
+    color:black;
+}
+tbody{
+    background-color: white!important;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+#cancelReservation{
+    position: absolute;
+z-index: 1;}
+#signoutButton{
+    z-index: 1;
+    position: absolute;
+    left: 70%;
+    right: 50px;
+}
+.ft{
+
+    font-family:'Montserrat', sans-serif;
+    font-size:40px;
+    color: aquamarine;
+    padding-top: 20px;
+
+
+}
+
+

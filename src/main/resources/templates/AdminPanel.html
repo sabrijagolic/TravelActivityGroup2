@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/admin-panel.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    <link href="css/admin-panel.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>ADMIN PANEL</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+<div class="container bg">
+    <div class="row align-middle">
+        <div class="col-lg-11 centerClass">
+            <p class="ft">ADMIN CONTROL PANEL</p>
+        </div>
+        <div class="col-lg-1">
+            <form class="form-signin" th:action="@{/logout}" method="POST">
+                <button id="logOut" class="btn btn-lg btn-primary btn-signin pull-right btn-main" type="submit">Log out</button>
+            </form><!-- /form -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1 col-lg-offset-11">
+            <button type="button" class="btn btn-info btn-lg btn-main" data-toggle="modal" data-target="#addHotel" onclick="clearForm()">Add hotel</button>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-lg-5">
+            <table class="table" id="tableUsers">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">User Longitude</th>
+                    <th scope="col">User Latitude</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-7">
+            <table class="table" id="tableHotels">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Hotel ID</th>
+                    <th scope="col">Hotel name</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Hotel Longitude</th>
+                    <th scope="col">Hotel Latitude</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Picture</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<div id="addHotel" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add hotel</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <input type="text" id="inputName" class="form-control" placeholder="Hotel name" name="name" required autofocus>
+                <input type="number" min="1" max="5" id="inputRating" class="form-control" placeholder="Star rating" name="rating" required autofocus>
+                <input type="number" id="inputLatitude" class="form-control" placeholder="Latitude" name="latitude" required autofocus>
+                <input type="number" id="inputLongitude" class="form-control" placeholder="Longitude" name="longitude" required autofocus>
+                <input type="text" id="inputAddress" class="form-control" placeholder="Address" name="address" required autofocus>
+                <input type="text" id="inputPicture" class="form-control" placeholder="Picture URL" name="picture" required autofocus>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-lg btn-success btn-signin" type="submit"  onclick="saveHotel()">Confirm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

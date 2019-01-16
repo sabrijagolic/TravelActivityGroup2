@@ -1,0 +1,31 @@
+
+.bg{
+    background: url(http://www.pptbackgrounds.org/uploads/executive-travel-backgrounds-wallpapers.jpg) no-repeat;width:100%;height:100vh;
+
+    background-size: cover;
+}
+.ft{
+
+    font-family:'Montserrat', sans-serif;
+    font-size:40px;
+    color: aquamarine;
+    padding-top:5%;
+
+}
+.pr{
+    margin-bottom:3%;
+    padding-left:50px;
+
+}
+.clr{
+    background-color: palegreen;
+    color: dimgray;
+}
+.row{
+    text-align: center;
+}
+span{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset='utf-8' />
+    <title>Book&Travel Supervisor Panel</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js' charset='utf-8'></script>
+    <script src='js/dashboard.js'></script>
+    <style>
+        body { margin:0; padding:0;
+            background-color: #191A1A;
+
+        }
+        #map { position:absolute; bottom:0; width:100%; top: 10%;
+            z-index: -1; }
+        .overlay {
+            position: absolute;
+            left: 10px;
+            top:15%;
+        }
+        .overlay button {
+            font:600 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+            color: #fff;
+            margin: 0;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            z-index:1;
+        }
+        .overlay button:hover {
+            background-color:aquamarine;
+        }
+        .pageTitle{
+            text-align: center;
+
+        }
+        .btn{
+            font-family:'Montserrat', sans-serif!important;
+            background-color: aquamarine!important;
+            color: black!important;
+            font-weight: bold!important;
+        }
+        .ft{
+
+            font-family:'Montserrat', sans-serif;
+            font-size:40px;
+            color: aquamarine;
+            padding-top: 20px;
+
+
+        }
+        .container{
+            width: 95%!important;
+        }
+        #singoutButton{
+            margin-top: 20px;
+        }
+        .btn{
+
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-11 pageTitle align-middle">
+            <p class="ft">SUPERVISOR PANEL</p>
+        </div>
+        <div class="col-lg-1 align-middle">
+            <form class="form-signin" th:action="@{/logout}" method="POST">
+                <button id="singoutButton" class=" btn btn-lg btn-primary btn-signin pull-right" type="submit">Log out</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id='map'>
+</div>
+<div class='overlay'>
+    <button class="d-inline btn" id='replay'  >Replay</button>
+</div>
+
+
+
+
+</body>
+</html>
